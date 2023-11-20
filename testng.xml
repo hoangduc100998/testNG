@@ -1,0 +1,9 @@
+<suite name="Maven_Page_Object_Model" verbose="1">
+
+    <test name="hanhtester">
+        <classes>
+            <class name="hanhtester.testcases.UserAccessTest">
+            </class>
+        </classes>
+    </test>
+</suite>
