@@ -1,0 +1,9 @@
+<suite name="TestNG" verbose="1">
+
+<test name="THTaoChromeDrivertuBeforeSuite">
+    <classes>
+        <class name="TestNGFramework.THTaoChromeDrivertuBeforeSuite.testcases.UserAccessTest">
+        </class>
+    </classes>
+</test>
+</suite>

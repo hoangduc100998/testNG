@@ -10,6 +10,7 @@ public class HomePage {
         element = driver.findElement(By.xpath("//h6[text()='Dashboard']"));
         return element;
     }
+
     public static WebElement menu_Profile(WebDriver driver) throws NoSuchElementException{
         element = driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']"));
         return element;
