@@ -1,4 +1,4 @@
-package TestNGFramework.THTaoChromeDrivertuBeforeSuite.pageObject;
+package TestNGFramework.C1THTaoChromeDrivertuBeforeSuite.pageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

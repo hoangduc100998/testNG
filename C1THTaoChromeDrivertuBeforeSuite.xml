@@ -2,7 +2,7 @@
 
 <test name="THTaoChromeDrivertuBeforeSuite">
     <classes>
-        <class name="TestNGFramework.THTaoChromeDrivertuBeforeSuite.testcases.UserAccessTest">
+        <class name="TestNGFramework.C1THTaoChromeDrivertuBeforeSuite.testcases.UserAccessTest">
         </class>
     </classes>
 </test>

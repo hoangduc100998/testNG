@@ -1,17 +1,11 @@
-package TestNGFramework.THTaoChromeDrivertuBeforeSuite.testcases;
+package TestNGFramework.C1BTTruyCapHomeWebsite.testcases;
 
-//import TestNGFramework.THTaoChromeDrivertuBeforeSuite.commons.TestListener;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
-import hanhtester.pageObject.*;
-import TestNGFramework.THTaoChromeDrivertuBeforeSuite.userActions.*;
+import TestNGFramework.C1THTaoChromeDrivertuBeforeSuite.userActions.*;
 
 //@Listeners(TestListener.class)
 
@@ -26,18 +20,13 @@ public class UserAccessTest {
     @Test (priority = 0)
     public void Test_Login() {
         //driver.manage().window().maximize();
-        PageActions.Login(driver, "Admin", "admin123");
+        PageActions.Login(driver, "client@demo.com", "riseDemo");
     }
     @Test (priority = 1)
     public void Test_Home() throws InterruptedException {
         PageActions.Dashboard(driver);
     }
 
-    @Test (priority = 2)
-    public void Test_Client() throws InterruptedException {
-        PageActions.Client(driver);
-
-    }
     @AfterTest
     public void afterTest() {
         driver.quit();

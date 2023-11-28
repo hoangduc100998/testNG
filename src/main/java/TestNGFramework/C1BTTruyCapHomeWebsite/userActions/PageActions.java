@@ -1,9 +1,8 @@
-package TestNGFramework.THTaoChromeDrivertuBeforeSuite.userActions;
+package TestNGFramework.C1BTTruyCapHomeWebsite.userActions;
 
 
-import TestNGFramework.THTaoChromeDrivertuBeforeSuite.pageObject.ClientPage;
-import TestNGFramework.THTaoChromeDrivertuBeforeSuite.pageObject.HomePage;
-import TestNGFramework.THTaoChromeDrivertuBeforeSuite.pageObject.LoginPage;
+import TestNGFramework.C1BTTruyCapHomeWebsite.pageObjects.HomePage;
+import TestNGFramework.C1BTTruyCapHomeWebsite.pageObjects.LoginPage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -19,9 +18,9 @@ public class PageActions {
         HomePage.text_Dashboard(driver).isDisplayed();
     }
 
-    public static void Client (WebDriver driver){
-        ClientPage.click_client(driver).click();
-        ClientPage.menu_Profile(driver).click();
-        ClientPage.menu_LogOut(driver).click();
-    }
+//    public static void HomePage(WebDriver driver){
+//        ClientPage.click_client(driver).click();
+//        ClientPage.menu_Profile(driver).click();
+//        ClientPage.menu_LogOut(driver).click();
+//    }
 }
