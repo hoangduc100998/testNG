@@ -1,10 +1,8 @@
 package TestNGFramework.BTHoanThien.PageObjects;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 
 public class HTLoginPage {
     private static WebElement element = null;
@@ -14,7 +12,7 @@ public class HTLoginPage {
     }
 
     //Phải tìm xpath để nó điền
-    static By txtbx_UserName=By.xpath("//input[@placeholder='Email']");
+    static By txtbx_UserName = By.xpath("//input[@placeholder='Email']");
     static By txtbx_Password=By.xpath("//input[@placeholder='Password']");
     static By btn_Login=By.xpath("//button[@type='submit']");
 
@@ -45,9 +43,23 @@ public class HTLoginPage {
         return element;
     }
     //Hành động mà tools làm, nhập username, passwpord xong click login
-    public static void Login (WebDriver driver , String username, String password) {
-//        HTLoginPage.UserName(driver).sendKeys(username);
-//        HTLoginPage.Password(driver).sendKeys(password);
+    public static void Login (WebDriver driver , String username, String password) throws InterruptedException {
+        // Create Actions class instance
+        Actions builder = new Actions(driver);
+
+//        UserName(driver).sendKeys(Keys.COMMAND + "a");
+//        UserName(driver).sendKeys(Keys.DELETE);
+//        Thread.sleep(300);
+        HTLoginPage.UserName(driver).clear();
+        HTLoginPage.UserName(driver).sendKeys(username);
+
+//        Password(driver).sendKeys(Keys.COMMAND + "a");
+//        Password(driver).sendKeys(Keys.DELETE);
+//        Thread.sleep(300);
+        HTLoginPage.Password(driver).clear();
+        HTLoginPage.Password(driver).sendKeys(password);
+
+        Thread.sleep(300);
         HTLoginPage.button_Login(driver).click();
     }
 }

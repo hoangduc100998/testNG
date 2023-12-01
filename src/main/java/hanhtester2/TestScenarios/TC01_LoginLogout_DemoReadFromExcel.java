@@ -1,21 +1,18 @@
 package hanhtester2.TestScenarios;
 
-import hanhtester2.Base.BaseSetup;
+import hanhtester2.Base.BaseTest;
 import hanhtester2.Listeners.TestListener;
 import hanhtester2.PageObjects.HomePage;
 import hanhtester2.PageObjects.LoginPage;
 import hanhtester2.Utilities.ExcelHelpers;
-import hanhtester2.Utilities.PropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static java.sql.DriverManager.getDriver;
-
 @Listeners(TestListener.class)
-public class TC01_LoginLogout_DemoReadFromExcel extends BaseSetup {
+public class TC01_LoginLogout_DemoReadFromExcel extends BaseTest {
     private WebDriver driver;
     private LoginPage loginPage;
     private HomePage homePage;

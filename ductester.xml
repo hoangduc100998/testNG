@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Maven_Page_Object_Model" verbose="1">
+
+    <test thread-count="5" name="ChromeTest">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="appURL" value="https://rise.fairsketch.com/signin"></parameter>
+        <classes>
+            <class name="ductester.TestCases.bt_TC01Login">
+            </class>
+        </classes>
+    </test>
+
+</suite>
