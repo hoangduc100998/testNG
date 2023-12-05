@@ -1,11 +1,9 @@
-package ductester.Logs;
-
-
+package ductester.Utilities.Logs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-public class btLog {
+public class thiLog {
     //Initialize Log4j instance
-    private static final Logger Log =  LogManager.getLogger(ducFinal.Logs.ducLog.class);
+    private static final Logger Log =  LogManager.getLogger(thiLog.class);
 
     //Info Level Logs
     public static void info (String message) {

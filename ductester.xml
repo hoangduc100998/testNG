@@ -5,7 +5,7 @@
         <parameter name="browser" value="chrome"></parameter>
         <parameter name="appURL" value="https://rise.fairsketch.com/signin"></parameter>
         <classes>
-            <class name="ductester.TestCases.bt_TC01Login">
+            <class name="ductester.TestCases.thi_bt_TC01Login">
             </class>
         </classes>
     </test>

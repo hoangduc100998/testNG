@@ -1,20 +1,19 @@
-package ductester.ExtentReport;
-import ductester.Actions.Commons.btBaseTest;
+package ductester.Utilities.ExtentReport;
+import ductester.Actions.commons.thiBaseTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import ductester.Utilities.ExtentReport.ExtentManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import java.util.HashMap;
 import java.util.Map;
+
 //Khởi tạo report
-public class btTestManager {
+public class thiExtenTestManager {
     static Map<Integer, ExtentTest> extentTestMap = new HashMap<>();
-    static ExtentReports extent = btManager.getExtentReports();
+    static ExtentReports extent = thiExtentManager.getExtentReports();
 
 
     public static ExtentTest getTest() {
@@ -29,20 +28,20 @@ public class btTestManager {
     }
 
     public WebDriver getDriver() {
-        WebDriver driver = btBaseTest.getDriver();
+        WebDriver driver = thiBaseTest.getDriver();
         return driver;
     }
 
-    public static void addScreenShot(String message) {
+    public static void addScreenShot (String message) {
         String base64Image = "data:image/png;base64,"
-                + ((TakesScreenshot) btBaseTest.getDriver()).getScreenshotAs(OutputType.BASE64);
+                + ((TakesScreenshot) thiBaseTest.getDriver()).getScreenshotAs(OutputType.BASE64);
         getTest().log(Status.INFO, message,        MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
     }
 
-    public static void addScreenShot(Status status, String message) {
+    public static void addScreenShot (Status status, String message) {
 
         String base64Image = "data:image/png;base64,"
-                + ((TakesScreenshot) btBaseTest.getDriver()).getScreenshotAs(OutputType.BASE64);
+                + ((TakesScreenshot) thiBaseTest.getDriver()).getScreenshotAs(OutputType.BASE64);
         getTest().log(status, message,               MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
     }
 
@@ -53,4 +52,5 @@ public class btTestManager {
     public static void logMessage(Status status, String message) {
         getTest().log(status, message);
     }
+
 }

@@ -1,9 +1,8 @@
-package ductester.Actions.Commons;
+package ductester.Actions.commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -11,9 +10,8 @@ import org.testng.annotations.Parameters;
 import java.util.concurrent.TimeUnit;
 
 //Chứa những hàm dùng chung dành cho TestCases
-public class btBaseTest {
+public class thiBaseTest {
     private static WebDriver driver;
-
 
     //Hàm này để tùy chọn Browser. Cho chạy trước khi gọi class này (BeforeClass)
     private void setDriver(String browserType, String appURL) {
@@ -30,7 +28,6 @@ public class btBaseTest {
     public static WebDriver getDriver() {
         return driver;
     }
-
 
     //Khởi tạo cấu hình của các Browser để đưa vào Switch Case
 

@@ -1,13 +1,11 @@
 package ductester.Interfaces;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-//Chứa tất cả actions dưới dạng method đó: click/select/verify/getText
-public class btLoginPageUI {
+public class thiLoginPageUI {
     private static WebElement element = null;
     WebDriver driver;
-    public btLoginPageUI (WebDriver driver){
+    public thiLoginPageUI (WebDriver driver){
+
         this.driver=driver;
     }
     //Web locator
